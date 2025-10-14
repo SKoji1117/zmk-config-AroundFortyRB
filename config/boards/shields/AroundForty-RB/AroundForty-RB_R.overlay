@@ -1,5 +1,6 @@
 #include "AroundForty-RB.dtsi"
 #include <dt-bindings/zmk/input_transform.h>
+#include <input/input-event-codes.h>
 
 
 &default_transform {
@@ -17,6 +18,32 @@
 };
 
 / {
+    zip_xy_to_scroll_mapper: zip_xy_to_scroll_mapper {
+        compatible = "zmk,input-processor-code-mapper";
+        #input-processor-cells = <0>;
+        type = <INPUT_EV_REL>;
+        x-code = <INPUT_REL_X>;
+        y-code = <INPUT_REL_Y>;
+        x-to-code = <INPUT_REL_HWHEEL>;
+        y-to-code = <INPUT_REL_WHEEL>;
+    };
+
+    zip_scroll_transform: zip_scroll_transform {
+        compatible = "zmk,input-processor-transform";
+        #input-processor-cells = <1>;
+        type = <INPUT_EV_REL>;
+        xy-swap;
+        x-invert;
+        y-invert;
+    };
+
+    zip_scroll_scaler: zip_scroll_scaler {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+    };
+
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
