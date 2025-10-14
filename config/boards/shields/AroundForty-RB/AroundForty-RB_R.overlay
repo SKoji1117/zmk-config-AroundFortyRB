@@ -1,6 +1,6 @@
 #include "AroundForty-RB.dtsi"
 #include <dt-bindings/zmk/input_transform.h>
-#include <input/input-event-codes.h>
+#include <dt-bindings/zmk/input_event_codes.h>
 
 
 &default_transform {
