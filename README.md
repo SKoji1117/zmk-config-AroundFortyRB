@@ -10,4 +10,10 @@ AMLはOFF。
 
 # Keymaps
 
+## Mac (& settings)
 
+![mac](figs/mac-keymap.svg)
+
+## Windows
+
+![windows](figs/win-keymap.svg)
