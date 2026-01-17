@@ -88,10 +88,10 @@
 
         Mac-Common_Layer {
             bindings = <
-&kp ESCAPE      &trans        &trans       &kp LG(UP_ARROW)    &trans                       &kp LG(W)        &mkp MB1            &mkp MB3      &mkp MB2             &kp HOME
-&kp TAB         &kp LEFT_GUI  &kp LS(TAB)  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)          &kp LEFT_ARROW   &kp DOWN_ARROW      &kp UP_ARROW  &kp RIGHT_ARROW      &kp PAGE_UP
-&kp LEFT_SHIFT  &trans        &trans       &kp LG(DOWN_ARROW)  &trans               &trans  &kp LG(LS(TAB))  &kp LG(LEFT_ARROW)  &kp SEMI      &kp LG(RIGHT_ARROW)  &kp PAGE_DOWN
-&kp LCTRL       &trans        &trans       &trans              &trans               &trans  &trans           &kp LG(T)           &trans        &trans               &kp END
+&kp ESCAPE      &trans    &trans       &kp LG(UP_ARROW)    &trans                       &kp LG(W)        &mkp MB1            &mkp MB3      &mkp MB2             &kp HOME
+&kp TAB         &kp LCMD  &kp LS(TAB)  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)          &kp LEFT_ARROW   &kp DOWN_ARROW      &kp UP_ARROW  &kp RIGHT_ARROW      &kp PAGE_UP
+&kp LEFT_SHIFT  &trans    &trans       &kp LG(DOWN_ARROW)  &trans               &trans  &kp LG(LS(TAB))  &kp LG(LEFT_ARROW)  &kp SEMI      &kp LG(RIGHT_ARROW)  &kp PAGE_DOWN
+&kp LCTRL       &trans    &trans       &trans              &trans               &trans  &trans           &kp LG(T)           &trans        &trans               &kp END
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -99,10 +99,10 @@
 
         Win-Common_Layer {
             bindings = <
-&kp ESCAPE      &trans        &trans       &kp LG(UP_ARROW)    &trans                       &kp LC(W)          &mkp MB1            &mkp MB3       &mkp MB2             &kp HOME
-&kp TAB         &kp LEFT_GUI  &kp LS(TAB)  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)          &kp LEFT_ARROW     &kp DOWN_ARROW      &kp UP_ARROW   &kp RIGHT_ARROW      &kp PAGE_UP
-&kp LEFT_SHIFT  &trans        &trans       &kp LG(DOWN_ARROW)  &trans               &trans  &kp LC(PAGE_DOWN)  &kp LA(LEFT_ARROW)  &kp SEMICOLON  &kp LA(RIGHT_ARROW)  &kp PAGE_DOWN
-&kp LCTRL       &trans        &trans       &trans              &trans               &trans  &trans             &kp LC(T)           &trans         &trans               &kp END
+&kp ESCAPE      &trans     &trans       &kp LC(UP_ARROW)    &trans                       &kp LC(W)          &mkp MB1            &mkp MB3       &mkp MB2             &kp HOME
+&kp TAB         &kp LCTRL  &kp LS(TAB)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)          &kp LEFT_ARROW     &kp DOWN_ARROW      &kp UP_ARROW   &kp RIGHT_ARROW      &kp PAGE_UP
+&kp LEFT_SHIFT  &trans     &trans       &kp LC(DOWN_ARROW)  &trans               &trans  &kp LC(PAGE_DOWN)  &kp LA(LEFT_ARROW)  &kp SEMICOLON  &kp LA(RIGHT_ARROW)  &kp PAGE_DOWN
+&kp LCTRL       &trans     &trans       &trans              &trans               &trans  &trans             &kp LC(T)           &trans         &trans               &kp END
             >;
 
             sensor-bindings = <&scroll_up_down>;
