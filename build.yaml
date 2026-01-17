@@ -17,8 +17,6 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
-zmk:
-  ref: v0.3.2
 include:
   - board: seeeduino_xiao_ble
     shield: AroundForty-RB_R rgbled_adapter
