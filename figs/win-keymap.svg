@@ -134,7 +134,9 @@ text.label, text.footer { stroke: black; }
 text.trans { fill: #7e8184; }
 path.combo { stroke: #7f7f7f; }
 
-}</style>
+}
+
+svg.keymap { background-color: #FFF; }</style>
 <g transform="translate(30, 0)" class="layer-Win-Default_Layer">
 <text x="0" y="28" class="label" id="Win-Default_Layer">Win-Default_Layer:</text>
 <g transform="translate(0, 56)">
@@ -189,14 +191,17 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(140, 84)" class="key keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">D</text>
+<text x="0" y="24" class="key hold"><tspan style="font-size: 70%">LEFT SHIFT</tspan></text>
 </g>
 <g transform="translate(196, 84)" class="key keypos-13">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">F</text>
+<text x="0" y="24" class="key hold">LCTRL</text>
 </g>
 <g transform="translate(252, 84)" class="key keypos-14">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">G</text>
+<text x="0" y="24" class="key hold"><tspan style="font-size: 88%">LEFT ALT</tspan></text>
 </g>
 <g transform="translate(476, 84)" class="key keypos-15">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -221,7 +226,6 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(28, 140)" class="key keypos-20">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">Z</text>
-<text x="0" y="24" class="key hold"><tspan style="font-size: 70%">LEFT SHIFT</tspan></text>
 </g>
 <g transform="translate(84, 140)" class="key keypos-21">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -524,7 +528,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(196, 28)" class="key keypos-3">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">Gui+UP</tspan><tspan x="0" dy="1.2em">ARROW</tspan>
+<tspan x="0" dy="-0.6em">Ctl+UP</tspan><tspan x="0" dy="1.2em">ARROW</tspan>
 </text>
 </g>
 <g transform="translate(252, 28)" class="key trans keypos-4">
@@ -563,9 +567,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(84, 84)" class="key keypos-11">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">LEFT</tspan><tspan x="0" dy="1.2em">GUI</tspan>
-</text>
+<text x="0" y="0" class="key tap">LCTRL</text>
 </g>
 <g transform="translate(140, 84)" class="key keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -574,13 +576,13 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(196, 84)" class="key keypos-13">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">Gui+</tspan><tspan x="0" dy="1.2em">LEFT</tspan><tspan x="0" dy="1.2em">ARROW</tspan>
+<tspan x="0" dy="-1.2em">Ctl+</tspan><tspan x="0" dy="1.2em">LEFT</tspan><tspan x="0" dy="1.2em">ARROW</tspan>
 </text>
 </g>
 <g transform="translate(252, 84)" class="key keypos-14">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">Gui+</tspan><tspan x="0" dy="1.2em">RIGHT</tspan><tspan x="0" dy="1.2em">ARROW</tspan>
+<tspan x="0" dy="-1.2em">Ctl+</tspan><tspan x="0" dy="1.2em">RIGHT</tspan><tspan x="0" dy="1.2em">ARROW</tspan>
 </text>
 </g>
 <g transform="translate(476, 84)" class="key keypos-15">
@@ -630,7 +632,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(196, 140)" class="key keypos-23">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">Gui+</tspan><tspan x="0" dy="1.2em">DOWN</tspan><tspan x="0" dy="1.2em">ARROW</tspan>
+<tspan x="0" dy="-1.2em">Ctl+</tspan><tspan x="0" dy="1.2em">DOWN</tspan><tspan x="0" dy="1.2em">ARROW</tspan>
 </text>
 </g>
 <g transform="translate(252, 140)" class="key trans keypos-24">

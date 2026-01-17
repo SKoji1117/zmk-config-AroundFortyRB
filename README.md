@@ -7,12 +7,11 @@ AMLはOFF。
 
 → config/boards/shields/AroundForty-RB/AroundForty-RB_R.overlay　61行目
 
-
 # Keymaps
 
-## Mac (& settings)
+## Mac (& NUM & settings)
 
-![mac](figs/mac-keymap.svg)
+![mac](figs/mac_and_setting_layer.svg)
 
 ## Windows
 
