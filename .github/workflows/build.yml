@@ -2,4 +2,5 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    # Last successful workflow (2026-02-17); compatible with ZMK v0.2 / Zephyr 3.5.
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@39a14154a98479b864fba7735717e5147f6c0c14
