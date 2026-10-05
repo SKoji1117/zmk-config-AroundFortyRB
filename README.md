@@ -42,27 +42,38 @@ AMLはOFF。
 | `AroundForty-RB_L.rgbled_adapter-seeeduino_xiao_ble-zmk.uf2` | 左手側（peripheral） |
 | `settings_reset-seeeduino_xiao_ble-zmk.uf2` | 設定の初期化用（左右共通） |
 
-キーマップは右手側が持っているので、キーマップだけを変えたときは右手側の書き込みだけで足ります。
-`.conf` や `.overlay`、`west.yml` を変えたときは左右とも書き込みます。
+ふだんは右手側に書き込むだけで足ります。キーマップは右手側が持っていて、左手側は押されたキーの位置を送るだけなので、キーマップの変更は左手側に何もしなくても反映されます。
 
-## 書き込み
+左手側にも書き込むのは、左手側のファームウェア自体が変わるときだけです。
 
-左右それぞれ、片方ずつ行います。
+- `AroundForty-RB_L.conf`、`AroundForty-RB_L.overlay`、`AroundForty-RB.dtsi` を変えたとき
+- `west.yml` で ZMK やモジュールの版を変えたとき（左右で版をそろえる）
 
-1. 書き込む側の XIAO を PC と USB で直接つなぐ
-2. ブートローダーモードに入れる
-   - 右手側: Setting レイヤーの `&bootloader` を押す
-   - 左手側: XIAO のリセットボタンをすばやく2回押す（右手側もこの方法で入れられる）
-3. `XIAO-SENSE` などの名前でドライブが現れるので、対応する `.uf2` をコピーする
+## 右手側の書き込み（ふだんはこれだけ）
+
+書き込むファイル: `AroundForty-RB_R.rgbled_adapter-seeeduino_xiao_ble-zmk.uf2`
+
+1. 右手側の XIAO を PC と USB で直接つなぐ
+2. Setting レイヤーの `&bootloader` を押して、ブートローダーモードに入れる（XIAO のリセットボタンをすばやく2回押してもよい）
+3. `XIAO-SENSE` などの名前でドライブが現れるので、`AroundForty-RB_R.rgbled_adapter-seeeduino_xiao_ble-zmk.uf2` をコピーする
 4. コピーが終わるとドライブが自動で外れて再起動する（「正しく取り出されませんでした」と出ても問題ない）
 
-`&bootloader` は押した側にしか効かないので、左手側はリセットボタンを使います。
+## 左手側の書き込み（必要なときだけ）
+
+書き込むファイル: `AroundForty-RB_L.rgbled_adapter-seeeduino_xiao_ble-zmk.uf2`
+
+1. 左手側の XIAO を PC と USB で直接つなぐ
+2. XIAO のリセットボタンをすばやく2回押して、ブートローダーモードに入れる（`&bootloader` は押した側にしか効かず、キーが右手側にあるので使えない）
+3. 現れたドライブに `AroundForty-RB_L.rgbled_adapter-seeeduino_xiao_ble-zmk.uf2` をコピーする
+4. コピーが終わるとドライブが自動で外れて再起動する
+
+左右のファイルを取り違えると、キーが反応しなくなります。その場合は正しいファイルを書き込み直せば戻ります。
 
 ## 左右がつながらなくなったとき
 
 左右のペアリング情報が壊れると、左手側の入力が届かなくなります。そのときは設定を初期化します。
 
-1. 左右それぞれに `settings_reset-seeeduino_xiao_ble-zmk.uf2` を書き込む
-2. 左右それぞれに本来の `.uf2` を書き込み直す
+1. 左右それぞれに `settings_reset-seeeduino_xiao_ble-zmk.uf2` を書き込む（左右で同じファイル）
+2. 右手側に `AroundForty-RB_R.rgbled_adapter-seeeduino_xiao_ble-zmk.uf2`、左手側に `AroundForty-RB_L.rgbled_adapter-seeeduino_xiao_ble-zmk.uf2` を書き込み直す
 3. 左右の電源を同時に入れ直す
 4. PC やスマホ側に残っている Bluetooth の登録を削除して、ペアリングし直す
